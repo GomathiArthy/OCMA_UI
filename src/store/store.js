@@ -1,13 +1,17 @@
 import { createStore, applyMiddleware } from "redux";
+import RootReducer from '../reducer/RootReducer'
 import thunk from 'redux-thunk';
-export default () => {
-    alert("called");
+const store =  () => {
+    
     try
     {
-    return createStore(customer, applyMiddleware(thunk));
+    return createStore(RootReducer, applyMiddleware(thunk));
+    
     }
     catch(e)
     {
         alert(e.message);
     }
-};
+    alert("called");
+}
+export default store;

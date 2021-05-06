@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+
+//import { Provider } from 'react-redux';
+import store from './store/store'
+import AddCustomerForm from './component/Pages/CustomerComponent/AddCustomerForm'
+import AddComplaint from './component/Pages/CustomerComponent/AddComplaint';
+// import { addStaffMember } from './action/ManagerAction/addstaffaction';
+import AddStaffMember from './component/Pages/ManagerComponent/AddStaffMember';
+//import CustomerRouter from './routers/customer/CustomerRouter'
+//import AddComplaint from './component/Pages/CustomerComponent/AddComplaint';
+import StaffMember from './component/Pages/ManagerComponent/StaffMember';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div>
+            {/* <Provider store={store()}>
+               <CustomerRouter />
+
+            </Provider> */}
+             {/* <AddCustomerForm store={store()}></AddCustomerForm>  */}
+             {/* <AddComplaint store={store()}></AddComplaint>  */}
+            {/* <AddStaffMember store={store()}></AddStaffMember>  */}
+
+            <StaffMember store={store()}></StaffMember>         </div>
+
+    );
+
+
 }
 
 export default App;

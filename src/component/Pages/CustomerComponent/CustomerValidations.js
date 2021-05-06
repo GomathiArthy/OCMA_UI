@@ -6,7 +6,7 @@ const CustomerValidations = {
             message: 'Aadhar number should contain a min of 9 digits ',
           },
         ],
-        errors: [],
+       errors: [],
         valid: false,
         state: ''
       },
@@ -32,7 +32,7 @@ const CustomerValidations = {
             message: 'Account number should be greater than 2 digits ',
           },
         ],
-        errors: [],
+       errors: [],
         valid: false,
         state: ''
       },
@@ -56,7 +56,7 @@ const CustomerValidations = {
             message: 'City must be char only ',
           },
         ],
-        errors: [],
+       errors: [],
         valid: false,
         state: ''
       },
@@ -100,8 +100,8 @@ const CustomerValidations = {
       zip: {
         rules: [
           {
-            test: /^[0-9]{6}/,
-            message: 'Zip should contain a min of 9 digits ',
+            test: /^(?=.*[0-9]){6}/,
+            message: 'Zip should contain 6 digits ',
           },
         ],
         errors: [],
@@ -128,7 +128,7 @@ const CustomerValidations = {
             message: 'Last Name must be char only ',
           },
         ],
-        errors: [],
+       errors: [],
         valid: false,
         state: ''
       },
@@ -137,7 +137,7 @@ const CustomerValidations = {
     mobileNo: {
       rules: [
         {
-          test: /^[6-9]{1}[0-9]{9}/,
+          test: /^(?=.*[6-9]){1}[0-9]{9}/,
           message: 'Mobile number should be a 10 digit number with first digit from 6 to 9',
         },
       ],
